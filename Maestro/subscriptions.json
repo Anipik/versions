@@ -149,6 +149,12 @@
       "vsoProject": "DevDiv",
       "buildDefinitionId": 9401
     }
+    // Update the Dependencies of ML.NET
+    "DotNet-ML-UpdateDependencies": {
+        "vsoInstance": "msdata.visualstudio.com",
+        "vsoProject": "AlgorithmsAndDataScience/TLC",
+        "buildDefinitionId": 4266
+    }
   },
   "subscriptions": [
     // Update dependencies in CoreCLR master
@@ -2178,6 +2184,15 @@
           "BranchToMirror": "<trigger-branch>",
           "CommitsToMirror": "<trigger-commitlist>"
         }
+      }
+    },
+    {
+      "triggerPaths": [
+        "https://github.com/dotnet/machinelearning/blob/master/**/*"
+      ],
+      "action": "DotNet-ML-UpdateDependencies",
+      "actionArguments": {
+      "vsoSourceBranch": "master"
       }
     }
   ]

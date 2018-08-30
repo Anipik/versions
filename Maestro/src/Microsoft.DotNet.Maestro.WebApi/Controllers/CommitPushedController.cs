@@ -19,7 +19,7 @@ namespace Microsoft.DotNet.Maestro.WebApi.Controllers
     {
         private AzureStorageService _storageService = new AzureStorageService();
 
-        [VerifyPayloadSignature]
+        //[VerifyPayloadSignature]
         public async Task Post(PushWebHookEvent e)
         {
             Trace.TraceInformation($"CommitPushed Started: {e}");
